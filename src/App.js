@@ -43,6 +43,10 @@ function BMI() {
       alert("Please enter both weight and height");
       return;
     }
+    if (height <= 0 || weight <= 0) {
+      alert("Please enter valid metrics");
+      return;
+    }
 
     const h = height / 100;
     const bmiVal = (weight / (h * h)).toFixed(2); // this will calculate the bmi value based on entered inputs, and estimates it to 2 decimal places and stores it inside bmiVal variable
